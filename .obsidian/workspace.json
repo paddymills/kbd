@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "bd8b115b347a6a9c",
+        "id": "b46b824ba680c968",
         "type": "tabs",
         "children": [
           {
-            "id": "cf15763d2d48d910",
+            "id": "146f8ec39c339b21",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -147,11 +147,12 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "cf15763d2d48d910",
+  "active": "146f8ec39c339b21",
   "lastOpenFiles": [
+    "schematic.pdf",
     "README.md",
     "Build.md",
-    "gallery/sweep-half-swept/back.png.md",
-    "pcb/README.md"
+    "pcb/README.md",
+    "gallery/sweep-half-swept/back.png.md"
   ]
 }
