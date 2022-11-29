@@ -10,6 +10,16 @@
 
 
 / {
+    behaviors {
+        tdb: tap_dance_bracket {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_bracket";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp>, <&kp>;
+        };
+    };
+
     combos {
         compatible = "zmk,combos";
         
@@ -64,9 +74,9 @@
         
         right_layer {
             bindings = <
-            &kp EXCL    &kp AT      &kp HASH    &kp DLLR    &kp PRCNT       &kp CARET   &kp AMPS        &kp KP_MULTIPLY &kp LPAR    &kp RPAR 
-            &kp HASH    &kp QMARK   &kp FSLH    &kp COLON   &kp SEMI        &kp MINUS   &kp KP_EQUAL    &kp LBRC        &kp RBRC    &kp BSPC
-            &kp LSHFT   &kp KP_PLUS &kp LBKT    &kp RBKT    &kp BSLH        &kp UNDER   &kp LEFT        &kp DOWN        &kp UP      &kp RIGHT
+            &kp EXCL    &kp AT      &kp HASH    &kp DLLR    &kp PRCNT       &kp CARET   &kp AMPS        &kp KP_MULTIPLY &tdb LPAR RPAR  &trans 
+            &kp HASH    &kp QMARK   &kp FSLH    &kp COLON   &kp SEMI        &kp MINUS   &kp KP_EQUAL    &kp LBRC        &kp RBRC        &kp BSPC
+            &kp LSHFT   &kp KP_PLUS &kp LBKT    &kp RBKT    &kp BSLH        &kp UNDER   &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT
                                                 &trans      &kp LCTRL       &kp SPACE   &mo 2
             >;
         };    
