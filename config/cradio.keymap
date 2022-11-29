@@ -80,12 +80,12 @@
             >;
 		};	
         
-        numpad_layer {
+        nav_numpad_layer {
             bindings = <
-            &trans  &kp HOME    &kp UP      &kp END     &trans      &kp SLASH   &kp N7  &kp N8  &kp N9  &kp MINUS
-            &trans  &kp LEFT    &kp DOWN    &kp RIGHT   &trans      &kp STAR    &kp N4  &kp N5  &kp N6  &kp PLUS
-            &trans  &trans      &trans      &trans      &trans      &kp DOT     &kp N1  &kp N2  &kp N3  &kp RET
-                                            &trans      &trans      &trans      &kp N0
+            &kp BT_NXT  &kp HOME    &kp UP      &kp END     &kp PG_UP       &kp SLASH   &kp N7  &kp N8  &kp N9  &kp MINUS
+            &kp BT_PRV  &kp LEFT    &kp DOWN    &kp RIGHT   &kp PG_DN       &kp STAR    &kp N4  &kp N5  &kp N6  &kp PLUS
+            &kp BT_CLR  &trans      &trans      &trans      &kp INSERT      &kp DOT     &kp N1  &kp N2  &kp N3  &kp RET
+                                                &trans      &kp K_APP       &trans      &kp N0
             >;
 		};
 	};
