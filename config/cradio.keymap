@@ -76,6 +76,12 @@
             layers = <QWERTY>;
             bindings = <&to COLEMAK>;
         };
+        
+        layer_reset {
+            timeout-ms = <50>;
+            key-positions = <0 4 5 9>;
+            bindings = <&to COLEMAK>;
+        };
     };
 
     conditional_layers {
