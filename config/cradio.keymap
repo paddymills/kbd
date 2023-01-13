@@ -98,6 +98,7 @@
         // TODO: homerow mods on additional layers
         // TODO: better for layer control ergonomics (i.e. &mo -> {&sl, &to, &tog})
         // TODO: mod to access control layer
+        // TODO: windows, linux, iPadOs shortcut layers (enable layers and then use conditional layers for shortcut directing)
 
         compatible = "zmk,keymap";
                 
