@@ -16,6 +16,10 @@
 #define NUMNAV  5
 #define KBDCTRL 6
 
+&mt {
+    tapping-term-ms = <400>;
+};
+
 / {
     behaviors {
         td_paren: tap_dance_parenthesis {
