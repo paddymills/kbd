@@ -17,7 +17,7 @@
 #define KBDCTRL 6
 
 &mt {
-    tapping-term-ms = <400>;
+    tapping-term-ms = <500>;
 };
 
 / {
@@ -108,28 +108,28 @@
                 
         colemak_dh {
             bindings = <
-                &kp      Q &kp      W &kp       F &kp       P &kp  B      &kp J     &kp       L &kp U       &kp      Y &kp SEMICOLON 
-                &mt LGUI A &mt LALT R &mt LCTRL S &mt LSHFT T &kp  G      &kp M     &mt RSHFT N &mt RCTRL E &mt LALT I &mt RGUI O
-                &kp      Z &kp      X &kp       C &kp       D &kp  V      &kp K     &kp       H &kp COMMA   &kp    DOT &kp RETURN
-                                                  &mo CHAR1   &mo  NUMNAV &kp SPACE &mo CHAR2
+                &kp Q   &kp W   &kp F   &kp P       &kp B           &kp J       &kp L   &kp U       &kp Y   &kp SEMICOLON 
+                &kp A   &kp R   &kp S   &kp T       &kp G           &kp M       &kp N   &kp E       &kp I   &kp O
+                &kp Z   &kp X   &kp C   &kp D       &kp V           &kp K       &kp H   &kp COMMA   &kp DOT &kp RETURN
+                                        &mo CHAR1   &mo NUMNAV      &kp SPACE   &mo CHAR2
             >;
         };
                 
         qwerty {
             bindings = <
-                &kp      Q &kp      W &kp       E &kp       R &kp  T      &kp Y     &kp       U &kp I       &kp      O &kp P 
-                &mt LGUI A &mt LALT S &mt LCTRL D &mt LSHFT F &kp  G      &kp H     &mt RSHFT J &mt RCTRL K &mt LALT L &mt RGUI SEMICOLON
-                &kp      Z &kp      X &kp       C &kp       V &kp  B      &kp N     &kp       M &kp COMMA   &kp    DOT &kp RETURN
-                                                  &trans      &trans      &trans    &trans
+                &kp Q   &kp W   &kp E   &kp R   &kp T       &kp Y   &kp U   &kp I       &kp O   &kp P 
+                &kp A   &kp S   &kp D   &kp F   &kp G       &kp H   &kp J   &kp K       &kp L   &kp SEMICOLON
+                &kp Z   &kp X   &kp C   &kp V   &kp B       &kp N   &kp M   &kp COMMA   &kp DOT &kp RETURN
+                                        &trans  &trans      &trans  &trans
             >;
         };
 
         char1 {
             bindings = <
-            &kp N1      &kp N2      &kp N3      &kp N4      &kp N5          &kp N6      &kp N7          &kp N8          &kp N9      &kp N0 
+            &sk LGUI    &sk LALT    &sk LCTRL   &sk LSHFT   &trans          &trans      &sk RSHFT       &sk RCTRL       &sk LALT    &sk RGUI 
             &kp TAB     &kp LC(S)   &kp DQT     &kp PIPE2   &kp HASH        &kp MINUS   &kp EQUAL       &kp LBKT        &kp RBKT    &kp DEL 
-            &kp ESC     &kp TILDE   &kp BSLH    &kp HASH    &kp TILDE2      &kp MINUS   &kp GRAVE       &kp LBKT        &kp RBKT    &kp SLASH 
-                                                &trans      &kp LGUI        &kp RGUI    &trans
+            &kp ESC     &kp TILDE   &kp BSLH    &kp HASH    &kp TILDE2      &kp UNDER   &kp GRAVE       &kp LBRC        &kp RBRC    &kp SLASH 
+                                                &trans      &kp LGUI        &kp LA(SPACE) &trans
             >;
         };
         
