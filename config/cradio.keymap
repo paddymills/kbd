@@ -48,7 +48,7 @@
 
         td_sbkt: tap_dance_square_bracket {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_BRACE";
+            label = "TAP_DANCE_SQUARE_BRACKET";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LESS_THAN>, <&kp GREATER_THAN>;
