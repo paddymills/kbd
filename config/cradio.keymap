@@ -11,7 +11,7 @@
 #define COLEMAK 0
 #define QWERTY  1
 #define EDITOR  2
-#define CHAR    3
+#define SECOND  3
 #define TRI     4
 #define NUMNAV  5
 #define KBDCTRL 6
@@ -111,7 +111,7 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
-            if-layers = <EDITOR CHAR>;
+            if-layers = <EDITOR SECOND>;
             then-layer = <TRI>;
         };
     };
@@ -130,7 +130,7 @@
                 &kp Q       &kp W       &kp F       &kp P       &kp B           &kp J       &kp L       &kp U       &kp Y       &kp SEMICOLON
                 &hm LGUI A  &hm LALT R  &hm LCTRL S &hm LSHFT T &kp G           &kp M       &hm RSHFT N &hm RCTRL E &hm LALT I  &hm RGUI O
                 &kp Z       &kp X       &kp C       &kp D       &kp V           &kp K       &kp H       &kp COMMA   &kp DOT     &kp RETURN
-                                                    &mo EDITOR  &tog NUMNAV     &kp SPACE   &mo CHAR
+                                                    &mo EDITOR  &tog NUMNAV     &kp SPACE   &mo SECOND
             >;
         };
                 
@@ -152,7 +152,7 @@
             >;
         };
         
-        char {
+        sec {
             bindings = <
                 &kp EXCL    &kp AT      &kp HASH    &kp DLLR    &kp PRCNT       &kp CARET   &kp AMPS    &kp STAR    &kp PLUS    &kp BACKSPACE
                 &kp HASH    &kp QMARK   &kp FSLH    &kp COLON   &kp SEMI        &kp MINUS   &kp LC(S)   &kp RCTRL   &kp LALT    &kp RGUI
