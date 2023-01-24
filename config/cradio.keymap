@@ -14,7 +14,6 @@
 #define SECOND  3
 #define TRI     4
 #define NUMNAV  5
-#define KBDCTRL 6
 
 // Home row mods macros
 #define HRML(k1,k2,k3,k4) &ht LGUI k1  &ht LALT k2  &ht LCTRL k3  &ht LSHFT k4
@@ -165,16 +164,16 @@
             >;
         };
 
-        editor {
+        developer {
             bindings = <
-                &kp ESC     &kp STAR    &kp AMP     &kp HASH    &none           &none       &tog NUMNAV &none       &kp DQT     &kp BACKSPACE
+                &kp ESC     &kp STAR    &kp AMPS    &kp HASH    &none           &none       &tog NUMNAV &none       &kp DQT     &kp BACKSPACE
                 &kp TAB     &kp LC(S)   &kp DQT     &kp LSHFT   &none           &kp UNDER   &td_paren   &td_bracket &td_brace   &td_sbkt
                 &caps_word  &kp TILDE   &kp BSLH    &kp EXCL    &kp DEL         &kp MINUS   &kp GRAVE   &kp COLON   &kp SEMI    &kp SLASH
                                                     &trans      &trans          &trans      &trans
             >;
         };
         
-        sec {
+        secondary {
             bindings = <
                 &kp EXCL    &kp AT      &kp HASH    &kp DLLR    &kp PRCNT       &kp CARET   &kp AMPS    &kp STAR    &kp PLUS    &kp BACKSPACE
                 &kp HASH    &kp QMARK   &kp FSLH    &kp COLON   &kp SEMI        &kp MINUS   &kp LC(S)   &kp RCTRL   &kp LALT    &kp RGUI
