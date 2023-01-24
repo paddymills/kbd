@@ -16,6 +16,10 @@
 #define NUMNAV  5
 #define KBDCTRL 6
 
+// Home row mods macros
+#define HRML(k1,k2,k3,k4) &ht LGUI k1  &ht LALT k2  &ht LCTRL k3  &ht LSHFT k4
+#define HRMR(k1,k2,k3,k4) &ht RSHFT k1  &ht RCTRL k2  &ht LALT k3  &ht RGUI k4
+
 &mt {
     tapping-term-ms = <500>;
 };
@@ -61,6 +65,17 @@
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <125>;
+            global-quick-tap;
+            bindings = <&kp>, <&kp>;
+        };
+
+        ht: hold_tap {
+            label = "hold_tap";
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <220>;
+            quick-tap-ms = <150>;
             global-quick-tap;
             bindings = <&kp>, <&kp>;
         };
@@ -135,16 +150,24 @@
                 
         qwerty {
             bindings = <
-                &kp Q       &kp W       &kp E       &kp R       &kp T           &kp Y       &kp U       &kp I       &kp O       &kp P
-                &hm LGUI A  &hm LALT S  &hm LCTRL D &hm LSHFT F &kp G           &kp H       &hm RSHFT J &hm RCTRL K &hm LALT L  &hm RGUI SEMICOLON
-                &kp Z       &kp X       &kp C       &kp V       &kp B           &kp N       &kp M       &kp COMMA   &kp DOT     &kp RETURN
-                                                    &trans      &trans          &trans      &trans
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │
+            &kp Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O      &kp P
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │ ' "      │
+            HRML(A,        S,         D,         F)     &kp G          &kp H      HRMR(J,        K,         L,        SQT)
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
+            &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                            &lt 2 TAB   &kp ENTER     &kp SPACE  &lt 3 BSPC
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
 
         editor {
             bindings = <
-                &kp ESC     &kp STAR    &kp AMP     &kp HASH    &none           &none       &none       &none       &kp DQT     &kp BACKSPACE
+                &kp ESC     &kp STAR    &kp AMP     &kp HASH    &none           &none       &tog NUMNAV &none       &kp DQT     &kp BACKSPACE
                 &kp TAB     &kp LC(S)   &kp DQT     &kp LSHFT   &none           &kp UNDER   &td_paren   &td_bracket &td_brace   &td_sbkt
                 &caps_word  &kp TILDE   &kp BSLH    &kp EXCL    &kp DEL         &kp MINUS   &kp GRAVE   &kp COLON   &kp SEMI    &kp SLASH
                                                     &trans      &trans          &trans      &trans
@@ -175,15 +198,6 @@
                 &bt BT_PRV  &kp LEFT    &kp DOWN    &kp RIGHT   &kp PG_DN       &kp STAR    &kp N4          &kp N5          &kp N6      &kp PLUS
                 &bt BT_CLR  &none       &none       &none       &kp K_APP       &kp DOT     &kp N1          &kp N2          &kp N3      &kp RET
                                                     &to 0       &tog NUMNAV     &trans      &kp N0
-            >;
-        };
-
-        kbd_control_layer {
-            bindings = <
-                &none       &none       &none       &bt BT_NXT  &reset          &reset      &none           &none           &none       &none 
-                &none       &none       &none       &bt BT_PRV  &bootloader     &bootloader &none           &none           &none       &none 
-                &none       &none       &none       &bt BT_CLR  &none           &none       &none           &none           &none       &none 
-                                                    &to 0       &trans          &trans      &trans
             >;
         };
     };
