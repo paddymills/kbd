@@ -118,7 +118,6 @@
 
     keymap {
         // TODO: homerow mods on additional layers
-        // TODO: better for layer control ergonomics (i.e. &mo -> {&sl, &to, &tog})
         // TODO: mod to access control layer
         // TODO: windows, linux, iPadOs shortcut layers (enable layers and then use conditional layers for shortcut directing)
         // TODO: move SEMICOLON off of colemak/qwerty layers? maybe replace with ampersand?
@@ -145,7 +144,7 @@
 
         editor {
             bindings = <
-                &kp ESC     &kp STAR    &kp AMP     &kp HASH    &none           &none       &none       &kp SQT     &kp DQT     &kp BACKSPACE
+                &kp ESC     &kp STAR    &kp AMP     &kp HASH    &none           &none       &none       &none       &kp DQT     &kp BACKSPACE
                 &kp TAB     &kp LC(S)   &kp DQT     &kp LSHFT   &none           &kp UNDER   &td_paren   &td_bracket &td_brace   &td_sbkt
                 &caps_word  &kp TILDE   &kp BSLH    &kp EXCL    &kp DEL         &kp MINUS   &kp GRAVE   &kp COLON   &kp SEMI    &kp SLASH
                                                     &trans      &trans          &trans      &trans
