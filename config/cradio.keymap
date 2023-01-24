@@ -145,7 +145,7 @@
 
         editor {
             bindings = <
-                &kp ESC     &kp STAR    &kp AMP     &kp HASH    &trans          &trans      &kp PIPE    &kp APOS    &kp DQT     &kp BACKSPACE
+                &kp ESC     &kp STAR    &kp AMP     &kp HASH    &trans          &trans      &kp BSLH    &kp SQT    &kp DQT     &kp BACKSPACE
                 &kp TAB     &kp LC(S)   &kp DQT     &kp LSHFT   &trans          &kp UNDER   &td_paren   &td_bracket &td_brace   &td_sbkt
                 &caps_word  &kp TILDE   &kp BSLH    &kp EXCL    &kp DEL         &kp MINUS   &kp GRAVE   &kp COLON   &kp SEMI    &kp SLASH
                                                     &trans      &trans          &trans      &trans
